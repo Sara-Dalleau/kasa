@@ -1,0 +1,28 @@
+.home {
+  width: 100%;
+  
+
+.home-content {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 100%;
+}
+
+.cards-container {
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  padding: 56px;
+  margin-top: 43px;
+  margin-bottom: 43px;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 60px;
+
+  justify-items: center;
+}
+
+}

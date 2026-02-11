@@ -1,0 +1,28 @@
+.header {
+  width: 100%;
+  padding: 40px 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    height: 68px;
+  }
+
+  nav {
+    display: flex;
+    gap: 40px;
+    
+    a {
+      font-size: 24px;
+      font-weight: 500;
+      color: black;
+      text-decoration: none;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
