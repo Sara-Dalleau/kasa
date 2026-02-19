@@ -5,15 +5,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
 
   img {
     height: 68px;
+    flex-shrink: 0;
   }
 
   nav {
     display: flex;
     gap: 40px;
-    
+    white-space: nowrap;
+
     a {
       font-size: 24px;
       font-weight: 500;
@@ -22,6 +25,26 @@
 
       &.active {
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .header {
+    padding: 20px;
+
+    img {
+      height: 47px;
+    }
+
+    nav {
+      gap: 20px;
+
+      a {
+        font-size: 12px;
+        text-transform: uppercase;
       }
     }
   }
