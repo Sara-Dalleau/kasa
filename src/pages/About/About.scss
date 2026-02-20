@@ -4,10 +4,20 @@
 
 .about-content {
   max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 10px auto 0;
+  padding: 0 20px 40px;
 }
 
+/* Collapses */
 .about-collapses {
-  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+  .about-collapses {
+    gap: 19px;
+  }
 }

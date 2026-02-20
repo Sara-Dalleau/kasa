@@ -1,7 +1,8 @@
 .collapse {
   max-width: 1023px;
   width: 100%;
-  margin: 0 auto 20px;
+  margin: 0 auto;
+
 }
 
 /* HEADER */
@@ -25,8 +26,9 @@
 }
 
 .collapse-title {
-  font-size: 18px;
+  font-size: 24px;
   margin: 0;
+
 }
 
 /* FLÈCHE */
@@ -44,7 +46,7 @@
 
 /* CONTENT — ÉTAT OUVERT */
 .collapse-open .collapse-content {
-  max-height: 1000px; // valeur suffisante pour le texte
+  max-height: 1000px;
 }
 
 /* ROTATION FLÈCHE */

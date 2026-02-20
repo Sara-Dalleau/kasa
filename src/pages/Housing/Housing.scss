@@ -1,0 +1,85 @@
+.housing {
+  width: 100%;
+  padding: 0 100px;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  border-radius: 25px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Flèches */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 64px;
+  cursor: pointer;
+  z-index: 10;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.left {
+    left: 10px;
+  }
+
+  &.right {
+    right: 10px;
+  }
+}
+
+/* Compteur */
+.carousel-counter {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .housing {
+    padding: 0 20px;
+  }
+
+  .carousel {
+    height: 255px;
+    border-radius: 10px;
+  }
+
+  .carousel-arrow {
+    font-size: 24px;
+
+    &.left {
+      left: 10px;
+    }
+
+    &.right {
+      right: 10px;
+    }
+  }
+
+  .carousel-counter {
+    font-size: 14px;
+    bottom: 15px;
+  }
+}

@@ -1,5 +1,5 @@
 .error {
-  min-height: calc(100vh - 209px); 
+  min-height: calc(100vh - 300px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,30 +7,38 @@
   text-align: center;
 }
 
+/* TITRE */
 .error-title {
-  font-size: 288px;
+  font-size: 250px;
   font-weight: 700;
   color: #ff6060;
   margin: 0;
 }
 
+/* TEXTE */
 .error-text {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 500;
   color: #ff6060;
   margin: 40px 0 80px;
 }
 
+/* LIEN */
 .error-link {
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 500;
   color: #000;
   text-decoration: underline;
-  margin-bottom: 70px;
 }
 
-/* Début Responsive */
+/* MOBILE */
 @media (max-width: 768px) {
+  .error {
+    min-height: calc(100vh - 260px);
+    justify-content: flex-start;
+    padding-top: 80px;
+  }
+
   .error-title {
     font-size: 96px;
   }

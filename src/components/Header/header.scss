@@ -8,17 +8,17 @@
   flex-wrap: nowrap;
 
   img {
-    height: 68px;
+    height: 60px;
     flex-shrink: 0;
   }
 
   nav {
     display: flex;
-    gap: 40px;
+    gap: 50px;
     white-space: nowrap;
 
     a {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 500;
       color: black;
       text-decoration: none;
