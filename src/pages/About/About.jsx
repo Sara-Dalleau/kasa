@@ -1,5 +1,5 @@
 import Collapse from "../../components/Collapse"
-import bannerAbout from "../../assets/images/banner-about.png"
+import bannerAbout from "../../assets/images/banner-about.svg"
 import Banner from "../../components/Banner"
 import "./About.scss"
 
@@ -34,11 +34,9 @@ function About() {
 
         <div className="about-collapses">
           {aboutData.map((item) => (
-            <Collapse
-              key={item.title}
-              title={item.title}
-              content={item.content}
-            />
+            <Collapse key={item.title} title={item.title}>
+              <p>{item.content}</p>
+            </Collapse>
           ))}
         </div>
       </div>

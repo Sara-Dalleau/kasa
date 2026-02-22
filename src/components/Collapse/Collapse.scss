@@ -59,3 +59,32 @@
   margin: 0;
   padding: 15px;
 }
+
+@media (max-width: 768px) {
+  .collapse-header {
+    padding: 10px 12px;
+    border-radius: 5px;
+  }
+
+  .collapse-title {
+    font-size: 13px;
+  }
+
+  .collapse-arrow {
+    width: 16px;
+  }
+
+  .collapse-content {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .collapse-content p {
+    margin: 0;
+  }
+
+  .collapse-content ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+}

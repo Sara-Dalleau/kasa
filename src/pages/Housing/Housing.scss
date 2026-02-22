@@ -1,9 +1,45 @@
 .housing {
   width: 100%;
   padding: 0 100px;
+  margin-bottom: 60px;
+}
+
+/* Section Top */
+
+.housing-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.housing-top-left {
+  flex: 1;
+}
+
+.housing-top-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+/* Titre + Localisation */
+
+.housing-header h1 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #FF6060;
+  margin: 0;
+}
+
+.housing-header p {
+  font-size: 18px;
+  margin-top: 5px;
 }
 
 /* Carousel */
+
 .carousel {
   position: relative;
   width: 100%;
@@ -55,12 +91,51 @@
   font-weight: 500;
 }
 
+/* Collapse */
+
+.housing-collapses {
+  display: flex;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.housing-collapses .collapse {
+  flex: 1;
+}
+
 /* Mobile */
+
 @media (max-width: 768px) {
+
   .housing {
     padding: 0 20px;
   }
 
+  /* Layout top devient vertical */
+  .housing-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Host + Rating sur la même ligne */
+  .housing-top-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Titre + location responsive */
+  .housing-header h1 {
+    font-size: 18px;
+  }
+
+  .housing-header p {
+    font-size: 14px;
+  }
+
+  /* Carousel */
   .carousel {
     height: 255px;
     border-radius: 10px;
@@ -82,4 +157,12 @@
     font-size: 14px;
     bottom: 15px;
   }
+
+  /* Collapses empilés */
+  .housing-collapses {
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 20px;
+  }
 }
+  

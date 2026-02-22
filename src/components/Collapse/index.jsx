@@ -1,36 +1,36 @@
 import { useState } from "react"
-import arrow from "../../assets/images/arrow-back.png"
+import arrow from "../../assets/images/arrow-back.svg"
 import "./Collapse.scss"
 
-function Collapse({ title, content }) {
-  const [isOpen, setIsOpen] = useState(false) // isOpen état false par défault, setIsOpen sert a react pour re render et passer a l'état demandé.
-  
+function Collapse({ title, children }) {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <div className={`collapse ${isOpen ? "collapse-open" : ""}`}> 
-      <button                 
+    <div className={`collapse ${isOpen ? "collapse-open" : ""}`}>
+      <button
         type="button"
         className="collapse-header"
         onClick={() => setIsOpen(!isOpen)}
       >
         <h2 className="collapse-title">{title}</h2>
-        <img className="collapse-arrow" src={arrow} alt="" aria-hidden="true" />
+        <img
+          className={`collapse-arrow ${isOpen ? "rotate" : ""}`}
+          src={arrow}
+          alt=""
+          aria-hidden="true"
+        />
       </button>
 
-      <div className="collapse-content">
-        <p>{content}</p>
-      </div>
+      {isOpen && (
+        <div className="collapse-content">
+          {children}
+        </div>
+      )}
     </div>
   )
 }
 
 export default Collapse
-
-
-
-
-
-
-
 
 
 

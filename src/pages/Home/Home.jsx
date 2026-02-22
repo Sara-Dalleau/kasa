@@ -1,7 +1,7 @@
 import Banner from "../../components/Banner/index.jsx"
 import Card from "../../components/Card"
 import logements from "../../data/logements.json"
-import bannerHome from "../../assets/images/banner.png"
+import bannerHome from "../../assets/images/banner.svg"
 import "./Home.scss"
 
 function Home() {

@@ -1,6 +1,10 @@
 import { useParams, Navigate } from "react-router-dom"
 import { useState } from "react"
 import logements from "../../data/logements.json"
+import Collapse from "../../components/Collapse/index.jsx"
+import Rating from "../../components/Rating/Rating"
+import Tags from "../../components/Tags/Tags"
+import Host from "../../components/Host/Host"
 import "./Housing.scss"
 
 function Housing() {
@@ -36,6 +40,8 @@ function Housing() {
 
   return (
     <div className="housing container">
+
+      {/* Carousel */}
       <div className="carousel">
         <img
           src={pictures[currentIndex]}
@@ -60,8 +66,51 @@ function Housing() {
           </>
         )}
       </div>
+      
+      <div className="housing-top">
+        <div className="housing-top-left">
 
-      <h1>{logement.title}</h1>
+          {/* Header: Titre + localisation */}
+          <div className="housing-header">
+            <h1>{logement.title}</h1>
+            <p>{logement.location}</p>
+          </div>
+
+          {/* Tags */}
+          <div className="housing-tags">
+            <Tags items={logement.tags} />
+          </div>
+        </div>
+      
+        <div className="housing-top-right">
+
+          {/* Hôte */}
+          <div className="housing-host">
+          <Host 
+            name={logement.host.name}
+            picture={logement.host.picture}/>
+          </div>
+          
+          {/* Etoile de notation */}
+          <div className="housing-rating">
+            <Rating value={logement.rating} />
+          </div>
+        </div>
+      </div>
+      
+      {/* Collapses: Description et équipements */}
+      <div className="housing-collapses">
+        <Collapse title="Description">
+          <p>{logement.description}</p>
+        </Collapse>
+
+        <Collapse title="Équipements">
+          <ul>
+            {logement.equipments.map((equipement, index) => (
+            <li key={index}>{equipement}</li>))}
+          </ul>
+        </Collapse>
+      </div>
     </div>
   )
 }
