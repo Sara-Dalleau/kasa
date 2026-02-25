@@ -35,6 +35,7 @@
 
 .housing-header p {
   font-size: 18px;
+  font-weight: 500;
   margin-top: 5px;
 }
 
@@ -62,23 +63,29 @@
   background: transparent;
   border: none;
   color: white;
-  font-size: 64px;
+  font-size: 130px;
+  line-height: 1;
   cursor: pointer;
   z-index: 10;
-  outline: none;
 
-  &:focus {
-    outline: none;
-  }
+  width: auto;
+  height: auto;
+  padding: 0;
 
-  &.left {
-    left: 10px;
-  }
 
-  &.right {
-    right: 10px;
-  }
+&:focus { 
+  outline: none; 
 }
+
+&.left { 
+  left: 20px; 
+} 
+
+&.right { 
+  right: 20px; 
+}
+}
+
 
 /* Compteur */
 .carousel-counter {
@@ -109,6 +116,7 @@
 
   .housing {
     padding: 0 20px;
+    margin-bottom: 20px;
   }
 
   /* Layout top devient vertical */
@@ -128,21 +136,22 @@
 
   /* Titre + location responsive */
   .housing-header h1 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .housing-header p {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 500;
   }
 
   /* Carousel */
   .carousel {
-    height: 255px;
+    height: 300px;
     border-radius: 10px;
   }
 
   .carousel-arrow {
-    font-size: 24px;
+    font-size: 28px;
 
     &.left {
       left: 10px;

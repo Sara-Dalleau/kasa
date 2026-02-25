@@ -12,7 +12,7 @@
   color: white;
   border: none;
   outline: none;
-  padding: 10px 15px;
+  padding: 8px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,9 +26,14 @@
 }
 
 .collapse-title {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
+}
 
+.collapse-content ul {
+  list-style: none;
+  padding: 12px 15px;
+  margin: 0;
 }
 
 /* FLÈCHE */
@@ -57,9 +62,11 @@
 /* TEXTE */
 .collapse-content p {
   margin: 0;
-  padding: 15px;
+  padding: 12px 15px;
 }
 
+
+/* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
   .collapse-header {
     padding: 10px 12px;
