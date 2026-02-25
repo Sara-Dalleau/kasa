@@ -3,6 +3,9 @@ import bannerAbout from "../../assets/images/banner-about.svg"
 import Banner from "../../components/Banner"
 import "./About.scss"
 
+
+// Données locales propres à la page About
+// Stockées en dehors du composant pour éviter leur recréation à chaque render
 const aboutData = [
   {
     title: "Fiabilité",
@@ -30,11 +33,17 @@ function About() {
   return (
     <div className="about">
       <div className="about-content">
+        {/* Affichage bannière image spécifique à About */}
         <Banner img={bannerAbout} />
 
+        {/* Parcours du tableau pour générer un Collapse pour chaque élément */}
         <div className="about-collapses">
           {aboutData.map((item) => (
+
+            // key nécessaire pour que React identifie chaque élément de la liste
             <Collapse key={item.title} title={item.title}>
+
+              {/* Contenu passé à l'intérieur du composant */}
               <p>{item.content}</p>
             </Collapse>
           ))}
