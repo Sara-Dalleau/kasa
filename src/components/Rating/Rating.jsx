@@ -1,5 +1,5 @@
-import starActive from "../../assets/images/star-active.svg"
-import starInactive from "../../assets/images/star-inactive.svg"
+import starActive from "../../assets/images/star-active.webp"
+import starInactive from "../../assets/images/star-inactive.webp"
 import "./Rating.scss"
 
 function Rating({ value }) {

@@ -1,7 +1,4 @@
 // Import des éléments nécessaires pour gérer le routing
-// BrowserRouter permet d'utiliser le système d'URL du navigateur
-// Routes contient toutes les routes
-// Route définit un chemin + le composant associé
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 // Import des pages

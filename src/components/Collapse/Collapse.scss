@@ -2,17 +2,17 @@
   max-width: 1023px;
   width: 100%;
   margin: 0 auto;
-
 }
 
 /* HEADER */
 .collapse-header {
   width: 100%;
+  height: 52px;
   background-color: #ff6060;
   color: white;
   border: none;
   outline: none;
-  padding: 8px 15px;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,23 +30,21 @@
   margin: 0;
 }
 
-.collapse-content ul {
-  list-style: none;
-  padding: 12px 15px;
-  margin: 0;
-}
-
 /* FLÈCHE */
 .collapse-arrow {
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
-/* CONTENT — ÉTAT FERMÉ (PAR DÉFAUT) */
+/* CONTENT — ÉTAT FERMÉ */
 .collapse-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.5s ease;
   background-color: #f6f6f6;
+  padding: 0 15px;
+}
+.collapse-inner {
+  padding: 12px 0;
 }
 
 /* CONTENT — ÉTAT OUVERT */
@@ -62,13 +60,18 @@
 /* TEXTE */
 .collapse-content p {
   margin: 0;
-  padding: 12px 15px;
 }
 
+.collapse-content ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 18px;
+}
 
 /* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
   .collapse-header {
+    height: auto;
     padding: 10px 12px;
     border-radius: 5px;
   }
@@ -82,16 +85,6 @@
   }
 
   .collapse-content {
-    padding: 12px;
     font-size: 12px;
-  }
-
-  .collapse-content p {
-    margin: 0;
-  }
-
-  .collapse-content ul {
-    margin: 0;
-    padding-left: 18px;
   }
 }

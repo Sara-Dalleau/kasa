@@ -1,4 +1,4 @@
-import logoHeader from '../../assets/images/logo.svg'
+import logoHeader from '../../assets/images/logo.webp'
 
 // NavLink permet de gérer la navigation avec état actif
 import { NavLink } from 'react-router-dom'
